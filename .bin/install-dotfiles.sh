@@ -1,10 +1,17 @@
 git clone --bare git@github.com:keepclean/dotfiles.git $HOME/.dotfiles
 
 function config {
-   /usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME} $@
+   /usr/bin/git --git-dir="${HOME}"/.dotfiles/ --work-tree="${HOME}" $@
 }
 
-config checkout
+ostype="$(uname)"
+if [ "${ostype}" = 'Linux' ]; then
+    branch="linux"
+else
+    branch="macos"
+fi
+
+config checkout "${branch}"
 if [ $? = 0 ]; then
   echo "Checked out dotfiles."
 else
@@ -13,5 +20,5 @@ else
     config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I {} mv {} .dotfiles-backup/{}
 fi
 
-config checkout
+config checkout "${branch}"
 config config status.showUntrackedFiles no
