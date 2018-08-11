@@ -13,7 +13,6 @@ export GOPATH=$HOME/Code/go
 export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export HOMEBREW_NO_ANALYTICS=1
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
 
