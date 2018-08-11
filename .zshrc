@@ -20,6 +20,6 @@ alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
 
 WORDCHARS=''
-[ -e /usr/local/bin/jump ] && eval "$(jump shell zsh)"
+[ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 
 zstyle ':completion:*' rehash true
