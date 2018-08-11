@@ -13,7 +13,7 @@ fi
 
 config checkout "${branch}"
 if [ $? = 0 ]; then
-  echo "Checked out dotfiles."
+    echo "Checked out dotfiles."
 else
     echo "Backing up pre-existing dotfiles."
     mkdir -p .dotfiles-backup
