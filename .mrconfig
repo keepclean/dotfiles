@@ -1,0 +1,24 @@
+
+[Work/vcs/gencfg]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/gencfg' 'gencfg'
+
+[Work/vcs/gencfg_db]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/data/gencfg_db' 'gencfg_db'
+
+[Work/vcs/infra]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/infra' 'infra'
+
+[Work/vcs/jnob-juggler-config]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/juggler/playbooks/search' 'jnob-juggler-config'
+
+[Work/vcs/junk]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/junk/keepclean' 'junk'
+
+[Work/vcs/nanny]
+checkout = git clone 'ssh://git@bb.yandex-team.ru/nanny/nanny.git' 'nanny'
+
+[Work/vcs/sandbox]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/sandbox' 'sandbox'
+
+[Work/vcs/testenv_jobs]
+checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/testenv/jobs' 'testenv_jobs'
