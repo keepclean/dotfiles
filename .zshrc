@@ -9,17 +9,16 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Customize to your needs...
 export EDITOR=vim
 setopt interactivecomments
-export GOPATH=$HOME/Code/go
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export GOPATH=$HOME/code/go
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
 
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
-alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
 
 WORDCHARS=''
-[ -e /usr/local/bin/jump ] && eval "$(jump shell zsh)"
+[ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 
 zstyle ':completion:*' rehash true

@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug '/usr/local/opt/fzf'
 Plug 'FooSoft/vim-argwrap'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
@@ -25,7 +24,6 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/CSApprox'
 Plug 'stephpy/vim-yaml', {'for': 'yaml'}
-Plug 'ericbn/vim-solarized'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'saltstack/salt-vim', {'for': 'sls'}
 call plug#end()
@@ -34,15 +32,8 @@ set nocompatible
 set timeoutlen=1000 ttimeoutlen=10
 autocmd! GUIEnter * set vb t_vb=
 
-let term_program=$TERM_PROGRAM
-let iterm_profile=$ITERM_PROFILE
-if iterm_profile == 'Light' || term_program == 'Apple_Terminal' || has("gui_macvim")
-    set background=light
-    colorscheme lucius
-else
-    colorscheme solarized
-    set background=dark
-endif
+set background=light
+colorscheme lucius
 let g:airline_theme="lucius"
 
 filetype plugin indent on
@@ -117,13 +108,6 @@ nnoremap <silent> <leader>a :ArgWrap<CR>
 set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__,.tags
-
-" MacVim-specific options
-if has("gui_macvim")
-    set guifont=InputMono\ ExLight:h13
-    set guioptions-=rL
-    set antialias
-endif
 
 let g:CSApprox_loaded = 1
 
