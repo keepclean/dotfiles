@@ -1,6 +1,0 @@
-# This is Git's per-user configuration file.
-[user]
-	name = Rustam Iuldashev
-	email = r.uldashev@gmail.com
-[push]
-	default = simple
