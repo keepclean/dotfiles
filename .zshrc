@@ -10,7 +10,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export EDITOR=vim
 setopt interactivecomments
 export GOPATH=$HOME/code/go
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
