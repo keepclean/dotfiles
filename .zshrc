@@ -19,6 +19,10 @@ export LANG=en_US.UTF-8
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
 
+ipmiproxy() {
+    open https://setup.yandex-team.ru/ipmiproxy/api/v1.0/${1}/kvm
+}
+
 WORDCHARS=''
 [ -e /usr/local/bin/jump ] && eval "$(jump shell zsh)"
 
