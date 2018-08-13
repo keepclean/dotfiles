@@ -24,6 +24,6 @@ ipmiproxy() {
 }
 
 WORDCHARS=''
-[ -e /usr/local/bin/jump ] && eval "$(jump shell zsh)"
+[ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 
 zstyle ':completion:*' rehash true
