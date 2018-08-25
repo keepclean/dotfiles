@@ -1,0 +1,98 @@
+autoload -Uz compinit && compinit
+autoload -U colors && colors
+autoload -Uz vcs_info
+
+zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+zstyle ':completion:*' rehash true
+
+# options
+setopt autocd
+setopt completealiases
+setopt correctall
+setopt extended_glob
+setopt extended_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt inc_append_history
+setopt interactivecomments
+setopt share_history
+setopt notify
+setopt check_jobs
+setopt prompt_subst
+
+unsetopt beep
+
+# emacs bindings
+bindkey -e
+
+# settings
+EDITOR=vim
+MANWIDTH=100
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+LC_CTYPE="en_US.UTF-8"
+SAVEHIST=$HISTSIZE
+TERM=xterm-256color
+WORDCHARS=''
+export LESS_TERMCAP_mb=$'\E[01;31m'      # Begins blinking.
+export LESS_TERMCAP_md=$'\E[01;31m'      # Begins bold.
+export LESS_TERMCAP_me=$'\E[0m'          # Ends mode.
+export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
+export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
+export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
+export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
+
+# VCS
+# https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+zstyle ':vcs_info:*' enable git svn
+precmd() {
+    vcs_info
+}
+zstyle ':vcs_info:*' formats "%F{31}(%s)%f on [%F{37}%b%f] %m%u%c%f "
+zstyle ':vcs_info:*' check-for-changes true
+
+# prompt
+if [[ ${EUID} == 0 ]]; then
+    PROMPT="[%F{34}%*%f] at %F{93}%m%f in %F{77}%2~%f "'${vcs_info_msg_0_}'"
+%{$fg[red]#%}%{$reset_color%} "
+else
+    PROMPT="[%F{34}%*%f] at %F{93}%m%f in %F{77}%2~%f "'${vcs_info_msg_0_}'"
+$ "
+fi
+RPROMPT=""
+
+# aliases
+
+    # common
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --colour=auto'
+alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias logs='cd /place/db/www/logs/'
+alias vsplitview="vim -O --cmd 'set nowrap' --cmd 'set scrollbind'"
+alias vd="vimdiff"
+
+    # git aliases
+alias gs='git status'
+alias ga='git add '
+alias gc='git commit -m' # requires you to type a commit message
+alias gp='git push'
+alias gd='git diff'
+
+# tmux
+# Predictable SSH authentication socket location.
+SOCK="/tmp/ssh-agent-$USER-screen"
+if test "${SSH_AUTH_SOCK}" && [ "${SSH_AUTH_SOCK}" != "${SOCK}" ]  ;then
+    rm -f /tmp/ssh-agent-"${USER}"-screen
+    ln -sf "${SSH_AUTH_SOCK}" "${SOCK}"
+    export SSH_AUTH_SOCK="${SOCK}"
+fi
+
+# external utils
+[ -e /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
+
+# source .profile
+if [ -e ${HOME}/.profile ]; then
+    source ${HOME}/.profile
+fi
