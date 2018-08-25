@@ -27,3 +27,7 @@ WORDCHARS=''
 [ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 
 zstyle ':completion:*' rehash true
+
+function godoc {
+    command godoc "$@"|${PAGER:-less}
+}
