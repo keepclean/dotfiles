@@ -22,3 +22,60 @@ checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/sandbox' 'sandb
 
 [Work/vcs/testenv_jobs]
 checkout = svn co 'svn+ssh://arcadia.yandex.ru/arc/trunk/arcadia/testenv/jobs' 'testenv_jobs'
+
+[Code/vcs/FlameGraph]
+checkout = git clone 'https://github.com/brendangregg/FlameGraph.git' 'FlameGraph'
+
+[Code/vcs/ambarchik-dev]
+checkout = git clone 'git@gitlab.com:keepclean/ambarchik-dev.git' 'ambarchik-dev'
+
+[Code/vcs/apolskaya.com-dev]
+checkout = git clone 'git@gitlab.com:keepclean/apolskaya.com-dev.git' 'apolskaya.com-dev'
+
+[Code/vcs/dotfiles]
+checkout = git clone 'git@github.com:keepclean/dotfiles.git' 'dotfiles'
+
+[Code/vcs/gobabygo]
+checkout = git clone 'ssh://git@bb.yandex-team.ru/~romanovich/gobabygo.git' 'gobabygo'
+
+[Code/vcs/goblueprints]
+checkout = git clone 'https://github.com/matryer/goblueprints.git' 'goblueprints'
+
+[Code/vcs/hometest]
+checkout = git clone 'git@github.com:keepclean/hometest.git' 'hometest'
+
+[Code/vcs/httpie]
+checkout = git clone 'https://github.com/jakubroztocil/httpie.git' 'httpie'
+
+[Code/vcs/keepclean.github.io]
+checkout = git clone 'git@github.com:keepclean/keepclean.github.io.git' 'keepclean.github.io'
+
+[Code/vcs/lucius]
+checkout = git clone 'https://github.com/jonathanfilip/lucius.git' 'lucius'
+
+[Code/vcs/macosx-iterm2-settings]
+checkout = git clone 'https://github.com/fnichol/macosx-iterm2-settings.git' 'macosx-iterm2-settings'
+
+[Code/vcs/netdata]
+checkout = git clone 'https://github.com/firehol/netdata.git' 'netdata'
+
+[Code/vcs/perf-tools]
+checkout = git clone 'https://github.com/brendangregg/perf-tools' 'perf-tools'
+
+[Code/vcs/coding_interview/code-problems]
+checkout = git clone 'https://github.com/blakeembrey/code-problems.git' 'code-problems'
+
+[Code/vcs/coding_interview/interactive-coding-challenges]
+checkout = git clone 'https://github.com/donnemartin/interactive-coding-challenges.git' 'interactive-coding-challenges'
+
+[Code/vcs/coding_interview/interview-questions]
+checkout = git clone 'https://github.com/ofirpicazo/interview-questions.git' 'interview-questions'
+
+[Code/vcs/coding_interview/roseperrone-interview-questions]
+checkout = git clone 'https://github.com/roseperrone/interview-questions.git' 'roseperrone-interview-questions'
+
+[Code/vcs/coding_interview/system-design-primer]
+checkout = git clone 'https://github.com/donnemartin/system-design-primer.git' 'system-design-primer'
+
+[Code/vcs/coding_interview/the-coding-interview]
+checkout = git clone 'https://github.com/mre/the-coding-interview.git' 'the-coding-interview'
