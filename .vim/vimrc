@@ -38,11 +38,10 @@ let term_program=$TERM_PROGRAM
 let iterm_profile=$ITERM_PROFILE
 if iterm_profile == 'Light' || term_program == 'Apple_Terminal' || has("gui_macvim")
     set background=light
-    colorscheme lucius
 else
-    colorscheme solarized
     set background=dark
 endif
+colorscheme lucius
 let g:airline_theme="lucius"
 
 filetype plugin indent on

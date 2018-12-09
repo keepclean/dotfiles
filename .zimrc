@@ -81,4 +81,4 @@ zhighlighters=(main brackets pattern line)
 #
 
 # Load these ssh identities with the ssh module
-zssh_ids=(id_rsa)
+zssh_ids=(id_ecdsa)
