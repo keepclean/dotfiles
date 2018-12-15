@@ -1,0 +1,44 @@
+{
+    // editor settings
+    "editor.cursorStyle": "block",
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+
+    // telemetry settings
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    // vim settings
+    "vim.incsearch": false,
+    "vim.statusBarColorControl": true,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+    "vim.leader": "<space>",
+    "vim.ignorecase": false,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.saveAll"]
+        },
+        {
+            "before": ["g", "k"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["workbench.action.focusRightGroup"]
+        }
+    ],
+
+    // window settings
+    "window.nativeFullScreen": false,
+
+    // workbench settings
+    "workbench.colorTheme": "FlatUI Dark",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    }
+}
