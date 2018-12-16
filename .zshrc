@@ -24,15 +24,24 @@ WORDCHARS=''
 
 zstyle ':completion:*' rehash true
 
-function switch-appearance {
-    echo -e "\033]50;SetProfile=$1\a"
-    export ITERM_PROFILE=$1
+function change-appearance {
+    local cmd="1337;SetProfile=${1}"
+    local iterm2_prefix="\x1B]"
+    local iterm2_suffix="\x07"
+
+    if test -n ${TMUX}; then
+        local tmux_prefix="\x1BPtmux;\x1B"
+        local tmux_suffix="\x1B\\"
+    fi
+    echo -n "${tmux_prefix}${iterm2_prefix}${cmd}${iterm2_suffix}${tmux_suffix}"
+
+    export ITERM_PROFILE=${1}
 }
 
-function swith-to-light {
-    switch-appearance Light
+function switch-to-light {
+    change-appearance Light
 }
 
-function swith-to-dark {
-    switch-appearance Dark
+function switch-to-dark {
+    change-appearance Dark
 }
