@@ -1,6 +1,7 @@
 require "wifi"
 require "keybindings"
 require "control_escape"
+require "appearance"
 
 -- Reload config
 

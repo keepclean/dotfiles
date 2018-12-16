@@ -23,3 +23,16 @@ WORDCHARS=''
 [ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 
 zstyle ':completion:*' rehash true
+
+function switch-appearance {
+    echo -e "\033]50;SetProfile=$1\a"
+    export ITERM_PROFILE=$1
+}
+
+function swith-to-light {
+    switch-appearance Light
+}
+
+function swith-to-dark {
+    switch-appearance Dark
+}
