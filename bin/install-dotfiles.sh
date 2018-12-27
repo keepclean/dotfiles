@@ -5,7 +5,7 @@ function config {
 }
 
 ostype="$(uname)"
-if [ "${ostype}" = 'Linux' ]; then
+if [ "${ostype}" = "Linux" ]; then
     branch="linux"
 else
     branch="macos"
@@ -23,6 +23,13 @@ config checkout "${branch}"
 config config status.showUntrackedFiles no
 
 git clone --recursive https://github.com/zimfw/zimfw.git "${HOME}"/.zim
+
+if [ "${ostype}" = "Darwin" ]; then
+    VCS_DIR="${HOME}/Code/vcs"
+    test -d "${VCS_DIR}" || mkdir -p "${VCS_DIR}"
+    chdir "${VCS_DIR}"
+    git clone https://github.com/jonathanfilip/lucius.git
+fi
 
 if command -v zsh; then
     echo "Change shell to zsh"
