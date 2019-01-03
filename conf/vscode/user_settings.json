@@ -40,12 +40,20 @@
             "commands": ["workbench.action.files.saveAll"]
         },
         {
-            "before": ["g", "k"],
+            "before": ["g", "h"],
             "commands": ["workbench.action.focusLeftGroup"]
         },
         {
-            "before": ["g", "h"],
+            "before": ["g", "l"],
             "commands": ["workbench.action.focusRightGroup"]
+        },
+        {
+            "before": ["g", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["g", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
         }
     ],
     "vim.statusBarColorControl": true,
