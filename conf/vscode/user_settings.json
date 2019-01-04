@@ -38,36 +38,22 @@
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.files.saveAll"]
-        },
-        {
-            "before": ["g", "h"],
-            "commands": ["workbench.action.focusLeftGroup"]
-        },
-        {
-            "before": ["g", "l"],
-            "commands": ["workbench.action.focusRightGroup"]
-        },
-        {
-            "before": ["g", "j"],
-            "commands": ["workbench.action.focusBelowGroup"]
-        },
-        {
-            "before": ["g", "k"],
-            "commands": ["workbench.action.focusAboveGroup"]
         }
     ],
     "vim.statusBarColorControl": true,
     "vim.visualstar": true,
 
     // window settings
+    "window.zoomLevel": 0,
     "window.nativeFullScreen": false,
 
     // workbench settings
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "FlatUI Dark",
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
-    }
+    },
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false
 }
