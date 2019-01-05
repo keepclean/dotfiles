@@ -8,8 +8,15 @@
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
 
+    // extensions settings
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
     // files settings
     "files.autoSave": "onWindowChange",
+
+    // keyboard settings
+    "keyboard.touchbar.enabled": false,
 
     // python settings
     "python.autoComplete.addBrackets": true,
@@ -38,7 +45,7 @@
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.files.saveAll"]
-        }
+        },
     ],
     "vim.statusBarColorControl": true,
     "vim.visualstar": true,
@@ -55,5 +62,8 @@
         "statusBar.debuggingBackground": "#005f5f"
     },
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    // update setiings
+    "update.enableWindowsBackgroundUpdates": false
 }
