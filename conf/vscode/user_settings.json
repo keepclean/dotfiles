@@ -47,6 +47,28 @@
             "commands": ["workbench.action.files.saveAll"]
         }
     ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-l>", "<C-w>"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-h>", "<C-w>"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-j>", "<C-w>"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-k>", "<C-w>"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+    ],
     "vim.statusBarColorControl": true,
     "vim.visualstar": true,
 
