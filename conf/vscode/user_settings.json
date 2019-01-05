@@ -4,9 +4,9 @@
     "editor.fontFamily": " 'Input mono' ",
     "editor.fontSize": 13,
     "editor.fontWeight": "400",
-    "editor.wordWrap": "on",
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
 
     // extensions settings
     "extensions.ignoreRecommendations": true,
@@ -45,7 +45,7 @@
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.files.saveAll"]
-        },
+        }
     ],
     "vim.statusBarColorControl": true,
     "vim.visualstar": true,
