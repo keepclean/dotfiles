@@ -11,28 +11,14 @@ export EDITOR=vim
 setopt interactivecomments
 export GOPATH=$HOME/Code/go
 export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export MANWIDTH=80
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
 
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
-
-function brew-update {
-    if ! command -v brew > /dev/null; then
-        return
-    fi
-
-    brew update --all
-    brew upgrade
-
-    for f in "$(brew cask outdated --greedy --quiet)"; do
-        brew cask reinstall "${f}"
-    done
-
-    brew cleanup
-}
 
 WORDCHARS=''
 [ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
@@ -59,4 +45,19 @@ function switch-to-light {
 
 function switch-to-dark {
     change-appearance Dark
+}
+
+function brew-update {
+    if ! command -v brew > /dev/null; then
+        return
+    fi
+
+    brew update --all
+    brew upgrade
+
+    for f in "$(brew cask outdated --greedy --quiet)"; do
+        brew cask reinstall "${f}"
+    done
+
+    brew cleanup
 }
