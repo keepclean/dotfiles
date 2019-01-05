@@ -11,4 +11,4 @@ function toggleAppearance()
   hs.osascript.applescript(cmd)
 end
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, 'a', function() toggleAppearance() end)
+hs.hotkey.bind(hyper, 'a', function() toggleAppearance() end)

@@ -19,6 +19,21 @@ export LANG=en_US.UTF-8
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
 
+function brew-update {
+    if ! command -v brew > /dev/null; then
+        return
+    fi
+
+    brew update --all
+    brew upgrade
+
+    for f in "$(brew cask outdated --greedy --quiet)"; do
+        brew cask reinstall "${f}"
+    done
+
+    brew cleanup
+}
+
 WORDCHARS=''
 [ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
 

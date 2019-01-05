@@ -1,0 +1,123 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "Enable\/disable WiFi via keyboard shortcut",
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "Method" : [
+      {
+        "name" : "toggleShow",
+        "stripped_doc" : [
+          "Toggle WiFi adapter"
+        ],
+        "doc" : "Toggle WiFi adapter",
+        "parameters" : [
+
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "WiFiToggle:toggleShow()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "WiFiToggle:toggleShow()",
+        "desc" : "Toggle WiFi adapter"
+      },
+      {
+        "name" : "bindHotkeys",
+        "stripped_doc" : [
+          "Binds hotkeys for WiFiToggle",
+          ""
+        ],
+        "doc" : "Binds hotkeys for WiFiToggle\n\nParameters:\n * mapping - A table containing hotkey objifier\/key details for the following items:\n  * toggle_wifi - Enable\/disable WiFi",
+        "parameters" : [
+          " * mapping - A table containing hotkey objifier\/key details for the following items:",
+          "  * toggle_wifi - Enable\/disable WiFi"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "WiFiToggle:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "WiFiToggle:bindHotkeys(mapping)",
+        "desc" : "Binds hotkeys for WiFiToggle"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "items" : [
+      {
+        "name" : "bindHotkeys",
+        "stripped_doc" : [
+          "Binds hotkeys for WiFiToggle",
+          ""
+        ],
+        "doc" : "Binds hotkeys for WiFiToggle\n\nParameters:\n * mapping - A table containing hotkey objifier\/key details for the following items:\n  * toggle_wifi - Enable\/disable WiFi",
+        "parameters" : [
+          " * mapping - A table containing hotkey objifier\/key details for the following items:",
+          "  * toggle_wifi - Enable\/disable WiFi"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "WiFiToggle:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "WiFiToggle:bindHotkeys(mapping)",
+        "desc" : "Binds hotkeys for WiFiToggle"
+      },
+      {
+        "name" : "toggleShow",
+        "stripped_doc" : [
+          "Toggle WiFi adapter"
+        ],
+        "doc" : "Toggle WiFi adapter",
+        "parameters" : [
+
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "WiFiToggle:toggleShow()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "WiFiToggle:toggleShow()",
+        "desc" : "Toggle WiFi adapter"
+      }
+    ],
+    "doc" : "Enable\/disable WiFi via keyboard shortcut\n\nDownload: [https:\/\/example.com](https:\/\/example.com)",
+    "name" : "WiFiToggle"
+  }
+]
