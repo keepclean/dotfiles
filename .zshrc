@@ -56,6 +56,7 @@ function brew-update {
     brew upgrade
 
     for f in "$(brew cask outdated --greedy --quiet)"; do
+        test -z "${f}" && continue
         brew cask reinstall "${f}"
     done
 
