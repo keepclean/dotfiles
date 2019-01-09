@@ -62,3 +62,7 @@ function brew-update {
 
     brew cleanup
 }
+
+function godoc {
+    command godoc "$@"|${PAGER:-less}
+}
