@@ -34,6 +34,11 @@ spoon.SpoonInstall:andUse("WiFiToggle", {
       toggle_wifi = {hyper, "w"}
     }
 })
+spoon.SpoonInstall:andUse("PopupTranslateSelection", {
+    hotkeys = {
+      translate_en_ru = {hyper, "t"}
+    }
+})
 
 
 --- Old modules
