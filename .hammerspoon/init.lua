@@ -35,6 +35,12 @@ spoon.SpoonInstall:andUse("WiFiToggle", {
     }
 })
 spoon.SpoonInstall:andUse("PopupTranslateSelection", {
+    disable = true,
+    hotkeys = {
+      translate_en_ru = {hyper, "t"}
+    }
+})
+spoon.SpoonInstall:andUse("PopupTranslateSelection", {
     hotkeys = {
       translate_en_ru = {hyper, "t"}
     }

@@ -11,8 +11,8 @@ export EDITOR=vim
 setopt interactivecomments
 export GOPATH=$HOME/Code/go
 export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
-export LC_ALL=C.UTF-8
-export LANG=C.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export MANWIDTH=80
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
@@ -37,6 +37,7 @@ function change-appearance {
     echo -n "${tmux_prefix}${iterm2_prefix}${cmd}${iterm2_suffix}${tmux_suffix}"
 
     export ITERM_PROFILE=${1}
+    tmux set-environment ITERM_PROFILE ${1}
 }
 
 function switch-to-light {
