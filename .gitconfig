@@ -1,6 +1,11 @@
 # This is Git's per-user configuration file.
+[core]
+    editor = vim
+    excludesfile = /Users/keepclean/.gitignore_global
 [user]
-	name = Rustam Iuldashev
-	email = r.uldashev@gmail.com
+    name = Rustam Iuldashev
+    email = r.uldashev@gmail.com
 [push]
-	default = simple
+    default = simple
+[help]
+    autocorrect = 1

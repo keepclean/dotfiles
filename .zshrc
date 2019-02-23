@@ -19,6 +19,7 @@ export MANWIDTH=80
 
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 alias p4merge='/Applications/p4merge.app/Contents/MacOS/p4merge'
+alias ls='gls --group-directories-first --color=auto'
 
 WORDCHARS=''
 [ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
@@ -53,7 +54,7 @@ function brew-update {
         return
     fi
 
-    brew update --all
+    brew update
     brew upgrade
 
     for f in $(brew cask outdated --greedy --quiet); do
