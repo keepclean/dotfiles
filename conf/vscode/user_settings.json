@@ -20,6 +20,7 @@
 
     // python settings
     "python.autoComplete.addBrackets": true,
+    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
         "--ignore=E501"
@@ -87,5 +88,6 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
 
     // update setiings
-    "update.enableWindowsBackgroundUpdates": false
+    "update.enableWindowsBackgroundUpdates": false,
+    "workbench.startupEditor": "newUntitledFile"
 }

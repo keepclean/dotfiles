@@ -9,7 +9,8 @@ fi
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 BREW="$(command -v brew)"
-BREW_FORMULAS="coreutils \
+BREW_FORMULAS="black \
+    coreutils \
     curl \
     fd \
     fzf \
