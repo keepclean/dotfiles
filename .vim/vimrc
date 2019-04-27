@@ -98,7 +98,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <S-h> gT
 nnoremap <S-l> gt
 
-set pastetoggle=<leader>c
+" set pastetoggle=<leader>c
 
 autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
