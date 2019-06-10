@@ -25,4 +25,8 @@ local function remapKey(mods, key, keyCode)
 end
 
 remapKey({"ctrl"}, "m", keyCode("return"))
-remapKey({"ctrl"}, "'", keyCode(42, "shift")) -- "|" pipe
+remapKey({"ctrl"}, "'", keyCode(42, "shift")) -- "|" aka pipe
+remapKey({"alt"}, "h", keyCode("left"))
+remapKey({"alt"}, "j", keyCode("down"))
+remapKey({"alt"}, "k", keyCode("up"))
+remapKey({"alt"}, "l", keyCode("right"))
