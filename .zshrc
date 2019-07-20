@@ -1,5 +1,9 @@
 # User configuration sourced by interactive shells
 
+if [ "$(tty)" = "/dev/tty1" ]; then
+    exec sway
+fi
+
 # Change default zim location
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
@@ -9,7 +13,7 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Customize to your needs...
 export EDITOR=vim
 setopt interactivecomments
-export GOPATH=$HOME/code/go
+export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
