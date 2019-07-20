@@ -14,7 +14,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu bemenu-run -b
-set $menu j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='kitty' --no-generic --use-xdg-de
+set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='kitty' --no-generic --use-xdg-de
 
 ### Output configuration
 #
@@ -46,8 +46,7 @@ output * bg /home/keepclean/.media/pictures/background.png fill
 # Read `man 5 sway-input` for more information about this section.
 
 input "1:1:AT_Translated_Set_2_keyboard" {
-   xkb_options altwin:swap_lalt_lwin
-   xkb_options caps:none
+   xkb_options altwin:swap_lalt_lwin,caps:none
 }
 
 input "2:7:SynPS\/2_Synaptics_TouchPad" {
