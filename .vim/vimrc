@@ -10,22 +10,23 @@ Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'ajh17/VimCompletesMe'
 Plug 'bling/vim-airline'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'craigemery/vim-autotag'
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/fzf.vim'
 Plug 'justmao945/vim-clang', {'for': ['c', 'cpp']}
 Plug 'majutsushi/tagbar'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'neomake/neomake'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'psf/black', {'for': 'python'}
+Plug 'saltstack/salt-vim', {'for': 'sls'}
 Plug 'sheerun/vim-polyglot'
+Plug 'stephpy/vim-yaml', {'for': 'yaml'}
 Plug 'tweekmonster/braceless.vim', {'for': 'python'}
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/CSApprox'
-Plug 'stephpy/vim-yaml', {'for': 'yaml'}
-Plug 'jonathanfilip/vim-lucius'
-Plug 'saltstack/salt-vim', {'for': 'sls'}
 call plug#end()
 
 set nocompatible
@@ -104,6 +105,7 @@ nnoremap <S-l> gt
 autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
 autocmd Filetype lua setlocal ts=2 sts=2 sw=2
+autocmd BufWritePre *.py execute ':Black'
 
 """""""""""
 " vim.fzf "
