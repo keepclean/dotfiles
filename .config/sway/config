@@ -20,7 +20,7 @@ set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" -
 
 ### Output configuration
 # output * bg /home/keepclean/.media/pictures/background.png fill
-output * bg #444444 solid_color
+output * bg #555555 solid_color
 
 # Example configuration:
 #
