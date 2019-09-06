@@ -12,11 +12,12 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Customize to your needs...
 export EDITOR=vim
-setopt interactivecomments
 export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export SYSTEMD_LESS="FRXMK"
+setopt interactivecomments
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
 
