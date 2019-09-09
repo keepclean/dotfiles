@@ -236,5 +236,8 @@ for_window [app_id="keepassxc"] floating enable, border pixel, move position 110
 for_window [app_id="pavucontrol"] floating enable, resize set width 635 height 400
 for_window [app_id="pcmanfm"] floating enable, border pixel
 
+for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
+bindsym $mod+t exec alacritty --class="alacritty-float"
+
 # junk
 xwayland disable
