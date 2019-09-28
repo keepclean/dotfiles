@@ -16,7 +16,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu bemenu-run -b
-set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='alacritty' --no-generic --use-xdg-de
+# set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='alacritty' --no-generic --use-xdg-de
+set $menu $HOME/bin/wofi --show drun --allow-images
 
 ### Output configuration
 # output * bg /home/keepclean/.media/pictures/background.png fill
@@ -108,16 +109,17 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 # Workspaces:
 #
     # switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    # use Ctrl instead of $mod as on macos
+    bindsym Ctrl+1 workspace 1
+    bindsym Ctrl+2 workspace 2
+    bindsym Ctrl+3 workspace 3
+    bindsym Ctrl+4 workspace 4
+    bindsym Ctrl+5 workspace 5
+    bindsym Ctrl+6 workspace 6
+    bindsym Ctrl+7 workspace 7
+    bindsym Ctrl+8 workspace 8
+    bindsym Ctrl+9 workspace 9
+    bindsym Ctrl+0 workspace 10
     # move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2

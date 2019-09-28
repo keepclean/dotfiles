@@ -5,7 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'FooSoft/vim-argwrap'
+Plug 'FooSoft/vim-argwrap', {'for': ['python', 'json']}
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'ajh17/VimCompletesMe'
@@ -17,16 +17,16 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/fzf.vim'
 Plug 'justmao945/vim-clang', {'for': ['c', 'cpp']}
 Plug 'majutsushi/tagbar'
-Plug 'maxbrunsfeld/vim-yankstack'
+" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'neomake/neomake'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'psf/black', {'for': 'python'}
 Plug 'saltstack/salt-vim', {'for': 'sls'}
 Plug 'sheerun/vim-polyglot'
-Plug 'stephpy/vim-yaml', {'for': 'yaml'}
+Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
 Plug 'tweekmonster/braceless.vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/CSApprox'
+" Plug 'vim-scripts/CSApprox'
 call plug#end()
 
 set nocompatible

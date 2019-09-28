@@ -24,6 +24,6 @@ setopt interactivecomments
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 
 WORDCHARS=''
-[ -e "$(command -v jump)" ] && eval "$(jump shell zsh)"
+[ -e "$(command -v autojump)" ] && source /etc/profile.d/autojump.zsh
 
 zstyle ':completion:*' rehash true

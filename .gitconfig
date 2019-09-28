@@ -1,6 +1,10 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Rustam Iuldashev
-	email = rustam.iuldashev@protonmail.com
+    name = Rustam Iuldashev
+    email = rustam.iuldashev@protonmail.com
 [push]
-	default = simple
+    default = simple
+[core]
+    editor = vim
+[help]
+    autocorrect = 1
