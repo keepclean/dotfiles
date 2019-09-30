@@ -4,7 +4,7 @@ Name=Firefox Private
 GenericName=Web Browser
 Comment=Browse the World Wide Web
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --new-instance --private-window %u
+Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --private-window %u
 Icon=ff-nightly128.png
 Terminal=false
 X-MultipleArgs=false

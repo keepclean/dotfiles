@@ -79,6 +79,8 @@ set backspace=indent,eol,start
 
 let mapleader=' '
 map <leader>w :write<CR>
+map <leader>e :lnext<CR> " next error
+map <leader>E :lprevious<CR> " previous error
 
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
@@ -136,7 +138,7 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:neomake_list_height = 5
+let g:neomake_list_height = 0
 
 """"""""""
 " python "
