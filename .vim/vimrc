@@ -26,7 +26,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
 Plug 'tweekmonster/braceless.vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'vim-scripts/CSApprox'
+Plug 'vim-scripts/CSApprox'
 call plug#end()
 
 set nocompatible
@@ -35,7 +35,6 @@ autocmd! GUIEnter * set vb t_vb=
 
 set background=light
 colorscheme lucius
-let g:airline_theme="lucius"
 
 filetype plugin indent on
 set encoding=utf-8
@@ -93,11 +92,12 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <S-h> gT
 nnoremap <S-l> gt
 
-autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
-autocmd Filetype json setlocal ts=2 sts=2 sw=2
-autocmd Filetype lua setlocal ts=2 sts=2 sw=2
 autocmd BufWritePre *.py execute ':Black'
 autocmd FileType gitcommit,markdown setlocal spell
+autocmd Filetype json setlocal ts=2 sts=2 sw=2
+autocmd Filetype lua setlocal ts=2 sts=2 sw=2
+autocmd Filetype qf setlocal norelativenumber nonumber colorcolumn=
+autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
 
 """""""""""
 " vim.fzf "
@@ -128,17 +128,17 @@ let g:indentLine_faster = 1
 " airline parametrs "
 """""""""""""""""""""
 let g:airline_extensions = ['tabline', 'neomake']
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#neomake#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:bufferline_echo = 0
-let g:airline_left_sep = ''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_sep = ''
+let g:airline_powerline_fonts = 1
 let g:airline_right_alt_sep = ''
-let g:neomake_list_height = 0
+let g:airline_right_sep = ''
+let g:airline_theme="lucius"
+let g:bufferline_echo = 0
 
 """"""""""
 " python "
@@ -149,15 +149,19 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 """"""""""
 " vim-go "
 """"""""""
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_build_constraints = 1
+" let g:go_auto_type_info = 1
+let g:go_def_mode = "gopls"
 let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_info_mode = "gopls"
+
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
@@ -180,6 +184,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Neomake "
 """""""""""
 autocmd! BufReadPost,BufWritePost * Neomake
+let g:neomake_list_height = 5
 let g:neomake_open_list = 2
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
@@ -194,16 +199,12 @@ let g:neomake_info_sign = {
     \ 'texthl': 'NeomakeInfoSign'
     \ }
 
+let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
     \ 'args': ['--ignore=E501'],
     \ }
-let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_yaml_enabled_makers = ['yamllint']
 let g:neomake_json_enabled_makers = ['jsonlint']
-let g:neomake_go_golangci_lint_maker = {
-    \ 'args': ['--fast'],
-    \ }
-let g:neomake_go_enabled_makers = ['golint', 'go']
 
 """"""""""
 " tagbar "
