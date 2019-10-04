@@ -96,7 +96,7 @@ autocmd BufWritePre *.py execute ':Black'
 autocmd FileType gitcommit,markdown setlocal spell
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
 autocmd Filetype lua setlocal ts=2 sts=2 sw=2
-autocmd Filetype qf setlocal norelativenumber nonumber colorcolumn=
+autocmd Filetype qf setlocal nobuflisted norelativenumber nonumber colorcolumn=
 autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
 
 """""""""""
@@ -203,8 +203,6 @@ let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
     \ 'args': ['--ignore=E501'],
     \ }
-let g:neomake_yaml_enabled_makers = ['yamllint']
-let g:neomake_json_enabled_makers = ['jsonlint']
 
 """"""""""
 " tagbar "
