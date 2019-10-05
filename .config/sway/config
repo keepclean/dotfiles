@@ -56,6 +56,12 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     natural_scroll enabled
 }
 
+input "2:10:TPPS/2_IBM_TrackPoint" {
+    accel_profile flat
+    dwt enabled
+    pointer_accel 0.1
+}
+
 ### Key bindings
 #
 # Basics:
