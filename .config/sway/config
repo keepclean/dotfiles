@@ -233,7 +233,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% #decrease sound vo
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 1
 
@@ -246,6 +246,9 @@ for_window [app_id="pcmanfm"] floating enable, border pixel
 
 for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
 bindsym $mod+t exec alacritty --class="alacritty-float"
+
+# redshift
+exec $HOME/bin/redshift -c ~/.config/redshift/redshift.conf
 
 # junk
 xwayland disable
