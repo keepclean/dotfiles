@@ -8,12 +8,14 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Customize to your needs...
 export EDITOR=vim
-setopt interactivecomments
-export GOPATH=$HOME/Code/go
-export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export GOPATH=$HOME/Code
+export GOBIN=$GOPATH/bin
+export PATH=/usr/local/opt/python/libexec/bin:/usr/local/bin:$GOBIN:$PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export MANWIDTH=80
+
+setopt interactivecomments
 
 [ -e ${HOME}/.tokens ] && source ${HOME}/.tokens
 
