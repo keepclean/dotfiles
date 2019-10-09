@@ -22,20 +22,18 @@ function obj:toggleWifi()
   local wifiIsPowered = hs.wifi.interfaceDetails('en0')['power']
   if wifiIsPowered then
     hs.wifi.setPower(false)
-    -- hs.alert.show('Wi-Fi Off')
     hs.notify.new({
         autoWithdraw = true,
         setIdImage = hs.configdir .. "/files/wifi-off.png",
-        title = utf8.char(0020), -- empty char
+        title = "WiFi Off",
         withdrawAfter = 1
     }):send()
   else
     hs.wifi.setPower(true)
-    -- hs.alert.show('Wi-Fi On')
     hs.notify.new({
         autoWithdraw = true,
         setIdImage=hs.configdir .. "/files/wifi-on.png",
-        title = utf8.char(0020), -- empty char
+        title = "WiFi On",
         withdrawAfter = 1
     }):send()
   end
