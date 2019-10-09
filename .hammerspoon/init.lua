@@ -34,15 +34,20 @@ spoon.SpoonInstall:andUse("WiFiToggle", {
       toggle_wifi = {hyper, "w"}
     }
 })
-spoon.SpoonInstall:andUse("PopupTranslateSelection", {
+spoon.SpoonInstall:andUse("DeepLTranslate", {
     disable = true,
     hotkeys = {
-      translate_en_ru = {hyper, "t"}
+      translate = {hyper, "t"}
     }
 })
 spoon.SpoonInstall:andUse("PopupTranslateSelection", {
     hotkeys = {
       translate_en_ru = {hyper, "t"}
+    }
+})
+spoon.SpoonInstall:andUse("BluetoothToggle", {
+    hotkeys = {
+      toggle_wifi = {hyper, "b"}
     }
 })
 
