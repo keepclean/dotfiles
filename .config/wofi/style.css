@@ -1,9 +1,10 @@
 window {
     /* margin: 5px;
     border: 2px solid red;
-    */
     background-color: #737373;
     border-radius: 9px;
+    */
+    background-color: rgba(56, 60, 74, 0.95);
     opacity: 0.84;
 }
 
@@ -11,7 +12,13 @@ window {
     /* margin: 5px;
     border: 2px solid blue;
     */
+    margin-top: 300px;
+    margin-left: 480px;
+    margin-right: 480px;
     background-color: transparent;
+    color: #D3DAE3;
+    font-family: NotoSans;
+    font-size: 20px;
 }
 
 #inner-box {
@@ -40,14 +47,24 @@ window {
     border: 2px solid cyan;
     background-color: transparent;
     text-decoration: underline;
+    margin-right: 480px;
     */
+    color: #D3DAE3;
     font-family: NotoSans;
     font-size: 24px;
+    margin-left: 8px;
 }
 
 #img {
+    /*
     margin-right: 5px;
     margin-left: 5px;
+     */
+    margin-left: 480px;
 }
 
-#entry {}
+#entry {
+    /*
+    background-color: rgb(64, 132, 214);
+    */
+}
