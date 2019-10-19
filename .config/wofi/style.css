@@ -23,8 +23,8 @@ window {
 
 #inner-box {
     /* margin: 5px;
-    border: 2px solid yellow;
     background-color: #ffffff;
+    border: 1px solid yellow;
     */
 }
 
@@ -40,6 +40,8 @@ window {
     border: 2px solid orange;
     background-color: orange;
     */
+    padding-left: 480px;
+    padding-right: 480px;
 }
 
 #text {
@@ -60,7 +62,7 @@ window {
     margin-right: 5px;
     margin-left: 5px;
      */
-    margin-left: 480px;
+    margin-left: 8px;
 }
 
 #entry {
