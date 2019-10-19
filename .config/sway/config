@@ -248,7 +248,7 @@ for_window [app_id="alacritty-float"] floating enable, border pixel, resize set 
 bindsym $mod+t exec alacritty --class="alacritty-float"
 
 # redshift
-exec $HOME/bin/redshift -c ~/.config/redshift/redshift.conf
+exec_always $HOME/bin/redshift -c ~/.config/redshift/redshift.conf
 
 # junk
 xwayland disable
