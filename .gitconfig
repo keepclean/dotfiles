@@ -1,4 +1,6 @@
 # This is Git's per-user configuration file.
+[alias]
+    last = log -1 HEAD
 [user]
     name = Rustam Iuldashev
     email = rustam.iuldashev@protonmail.com

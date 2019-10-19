@@ -17,7 +17,7 @@ set $term alacritty
 # Note: it's recommended that you pass the final command to sway
 # set $menu bemenu-run -b
 # set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='alacritty' --no-generic --use-xdg-de
-set $menu $HOME/bin/wofi --show drun --allow-images
+set $menu $HOME/bin/wofi --show drun --allow-images --width 400
 
 ### Output configuration
 # output * bg /home/keepclean/.media/pictures/background.png fill

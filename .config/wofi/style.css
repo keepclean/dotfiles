@@ -1,0 +1,53 @@
+window {
+    /* margin: 5px;
+    border: 2px solid red;
+    */
+    background-color: #737373;
+    border-radius: 9px;
+    opacity: 0.84;
+}
+
+#input {
+    /* margin: 5px;
+    border: 2px solid blue;
+    */
+    background-color: transparent;
+}
+
+#inner-box {
+    /* margin: 5px;
+    border: 2px solid yellow;
+    background-color: #ffffff;
+    */
+}
+
+#outer-box {
+    /* margin: 5px;
+    border: 2px solid green;
+    background-color: green;
+    */
+}
+
+#scroll {
+    /* margin: 5px;
+    border: 2px solid orange;
+    background-color: orange;
+    */
+}
+
+#text {
+    /* margin: 5px;
+    border: 2px solid cyan;
+    background-color: transparent;
+    text-decoration: underline;
+    */
+    font-family: NotoSans;
+    font-size: 24px;
+}
+
+#img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#entry {}
