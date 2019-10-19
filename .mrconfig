@@ -79,3 +79,6 @@ checkout = git clone 'git@github.com:keepclean/tinyfix.git' 'tinyfix'
 
 [code/src/github.com/keepclean/win2alt]
 checkout = git clone 'git@github.com:keepclean/win2alt.git' 'win2alt'
+
+[code/src/hg.sr.ht/sircmpwn/wev]
+checkout = git clone 'https://git.sr.ht/~sircmpwn/wev' 'wev'

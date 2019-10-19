@@ -24,6 +24,7 @@ Plug 'psf/black', {'for': 'python'}
 Plug 'saltstack/salt-vim', {'for': 'sls'}
 Plug 'sheerun/vim-polyglot'
 Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
+Plug 'trevordmiller/nova-vim'
 Plug 'tweekmonster/braceless.vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/CSApprox'
@@ -33,8 +34,13 @@ set nocompatible
 set timeoutlen=1000 ttimeoutlen=10
 autocmd! GUIEnter * set vb t_vb=
 
+let term_color=$TERM_COLOR
 set background=light
 colorscheme lucius
+if term_color == 'nova'
+    colorscheme nova
+    set background=dark
+endif
 
 filetype plugin indent on
 set encoding=utf-8
