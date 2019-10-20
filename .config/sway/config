@@ -233,7 +233,7 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +1% #increase sound vo
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
-bindsym XF86Bluetooth exec sudo /usr/bin/systemctl start bluetooth.service
+bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
 # bindsym XF86Display exec  # F7
 # bindsym XF86Tools exec  # F9
 # bindsym XF86Favorites exec  # F12
