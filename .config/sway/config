@@ -11,7 +11,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term $HOME/bin/alacritty-time-wrapper
 
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
@@ -250,7 +250,7 @@ for_window [app_id="pavucontrol"] floating enable, resize set width 635 height 4
 for_window [app_id="pcmanfm"] floating enable, border pixel
 
 for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
-bindsym $mod+t exec alacritty --class="alacritty-float"
+bindsym $mod+t exec $term --class="alacritty-float"
 
 # redshift
 exec_always $HOME/bin/redshift -c ~/.config/redshift/redshift.conf
