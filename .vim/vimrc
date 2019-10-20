@@ -34,19 +34,21 @@ set nocompatible
 set timeoutlen=1000 ttimeoutlen=10
 autocmd! GUIEnter * set vb t_vb=
 
+filetype plugin indent on
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+syntax on
+
 let term_color=$TERM_COLOR
 set background=light
 colorscheme lucius
 if term_color == 'nova'
     colorscheme nova
     set background=dark
+    highlight SignColumn guibg=#3C4C55
 endif
 
-filetype plugin indent on
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
-syntax on
 
 set hidden
 set noruler
@@ -205,7 +207,7 @@ let g:neomake_info_sign = {
     \ 'texthl': 'NeomakeInfoSign'
     \ }
 
-let g:neomake_python_enabled_makers = ['flake8']
+" let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
     \ 'args': ['--ignore=E501'],
     \ }
@@ -232,8 +234,8 @@ autocmd FileType python BracelessEnable +fold
 """""""""""""
 " yankstack "
 """""""""""""
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
+" nmap <leader>p <Plug>yankstack_substitute_older_paste
+" nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 """"""""""""
 " vim-jedi "
