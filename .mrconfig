@@ -82,3 +82,9 @@ checkout = git clone 'git@github.com:keepclean/win2alt.git' 'win2alt'
 
 [code/src/hg.sr.ht/sircmpwn/wev]
 checkout = git clone 'https://git.sr.ht/~sircmpwn/wev' 'wev'
+
+[code/src/myrepos.branchable.com/myrepos]
+checkout = git clone 'git://myrepos.branchable.com/' 'myrepos'
+
+[code/src/github.com/minus7/redshift]
+checkout = git clone 'https://github.com/minus7/redshift.git' 'redshift'

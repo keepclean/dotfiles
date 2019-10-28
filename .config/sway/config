@@ -21,7 +21,7 @@ set $menu $HOME/bin/wofi --show drun --allow-images --width 1920 --height 1102
 
 ### Output configuration
 # output * bg /home/keepclean/.media/pictures/background.png fill
-output * bg #555555 solid_color
+output * bg #555555 solid_color scale 1.4
 
 # Example configuration:
 #
@@ -48,8 +48,8 @@ output * bg #555555 solid_color
 # Read `man 5 sway-input` for more information about this section.
 
 input "1:1:AT_Translated_Set_2_keyboard" {
-   xkb_layout "us,ru"
-   xkb_options altwin:swap_lalt_lwin,caps:none,grp:alt_space_toggle
+    xkb_layout "us,ru"
+    xkb_options altwin:swap_lalt_lwin,caps:none,grp:alt_space_toggle
 }
 
 input "2:7:SynPS/2_Synaptics_TouchPad" {
@@ -61,6 +61,17 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
     dwt enabled
     pointer_accel 0.1
 }
+
+input "1452:627:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
+    xkb_layout "us,ru"
+    xkb_options caps:none,grp:alt_space_toggle
+}
+
+# MBP touchpad
+input "1452:627:bcm5974" {
+    natural_scroll enabled
+}
+
 
 ### Key bindings
 #
@@ -74,7 +85,11 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
 
     # start your launcher
     # bindsym $mod+d exec $menu
-    bindsym XF86Keyboard exec $menu
+    # T470
+    # bindsym XF86Keyboard exec $menu
+
+    # MBP12,1
+    bindsym XF86LaunchB exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -117,6 +132,8 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
 #
     # switch to workspace
     # use Ctrl instead of $mod as on macos
+    bindsym Ctrl+right workspace next
+    bindsym Ctrl+left workspace prev
     bindsym Ctrl+1 workspace 1
     bindsym Ctrl+2 workspace 2
     bindsym Ctrl+3 workspace 3
@@ -127,6 +144,7 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
     bindsym Ctrl+8 workspace 8
     bindsym Ctrl+9 workspace 9
     bindsym Ctrl+0 workspace 10
+
     # move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2
@@ -146,8 +164,8 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindcode $mod+20 splith  # "minus" (12 (wev) + 8)
+    bindcode $mod+51 splitv  # "backslash" (43 (wev) + 8)
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
@@ -234,6 +252,8 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% #decrease sound vo
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
 bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
+
+# t470
 # bindsym XF86Display exec  # F7
 # bindsym XF86Tools exec  # F9
 # bindsym XF86Favorites exec  # F12
@@ -241,6 +261,10 @@ bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 1
+
+# Keyboard brightness control
+bindsym XF86KbdBrightnessUp exec light -s 'sysfs/leds/smc::kbd_backlight' -A 1
+bindsym XF86KbdBrightnessDown exec light -s 'sysfs/leds/smc::kbd_backlight' -U 1
 
 # apps behavior
 for_window [app_id="blueberry.py"] floating enable
