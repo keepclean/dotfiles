@@ -88,3 +88,6 @@ checkout = git clone 'git://myrepos.branchable.com/' 'myrepos'
 
 [code/src/github.com/minus7/redshift]
 checkout = git clone 'https://github.com/minus7/redshift.git' 'redshift'
+
+[code/src/github.com/cylgom/ly]
+checkout = git clone 'https://github.com/cylgom/ly.git' 'ly'

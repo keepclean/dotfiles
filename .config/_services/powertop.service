@@ -1,0 +1,11 @@
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=exec
+ExecStart=/sbin/powertop --auto-tune
+ExecStartPost=/sbin/rfkill unblock 0
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
