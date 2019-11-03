@@ -277,8 +277,7 @@ for_window [app_id="pcmanfm"] floating enable, border pixel
 for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
 bindsym $mod+t exec $term --class="alacritty-float"
 
-# redshift
-exec_always $HOME/bin/redshift -c ~/.config/redshift/redshift.conf
+include /etc/sway/conf.d/*
 
 # junk
 xwayland disable

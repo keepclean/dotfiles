@@ -1,0 +1,10 @@
+[Unit]
+Description=Redshift display colour temperature adjustment
+Documentation=http://jonls.dk/redshift/
+
+[Service]
+ExecStart=%h/bin/redshift -c %h/.config/redshift/redshift.conf
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
