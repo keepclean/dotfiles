@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+output="eDP-1"
+output_image="/tmp/${output}.jpg"
+
+grim -t jpeg -q 97 -o "${output}" "${output_image}"
+
+convert "${output_image}" -spread 15 ~/.media/pictures/screen-is-locked.png -gravity center -composite "${output_image}" 2>/dev/null
+
+swaylock -i "${output}:${output_image}"

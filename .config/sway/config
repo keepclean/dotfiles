@@ -19,6 +19,8 @@ set $term $HOME/bin/alacritty-time-wrapper
 # set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='alacritty' --no-generic --use-xdg-de
 set $menu /sbin/flock -n /tmp/wofi-menu $HOME/bin/wofi --show drun --allow-images --width 1920 --height 1102
 
+set $swaylock $HOME/bin/sway-lock-wrapper
+
 ### Output configuration
 # output * bg /home/keepclean/.media/pictures/background.png fill
 output * bg #555555 solid_color scale 1.4
@@ -104,6 +106,9 @@ input "1452:627:bcm5974" {
 
     # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    # lock screen
+    bindsym $mod+Ctrl+q exec $swaylock
 #
 # Moving around:
 #
