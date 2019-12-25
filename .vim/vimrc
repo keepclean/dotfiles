@@ -5,6 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'FooSoft/vim-argwrap', {'for': ['python', 'json']}
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
@@ -12,18 +13,19 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'bling/vim-airline'
 Plug 'craigemery/vim-autotag'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'fatih/vim-go', {'for': 'go'}
+" Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'govim/govim', {'for': 'go'}
 Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/fzf.vim'
 Plug 'justmao945/vim-clang', {'for': ['c', 'cpp']}
 Plug 'majutsushi/tagbar'
-" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'neomake/neomake'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'psf/black', {'for': 'python'}
 Plug 'saltstack/salt-vim', {'for': 'sls'}
 Plug 'sheerun/vim-polyglot'
 Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
+Plug 'tpope/vim-fugitive'
 Plug 'trevordmiller/nova-vim'
 Plug 'tweekmonster/braceless.vim', {'for': 'python'}
 Plug 'vim-airline/vim-airline-themes'
@@ -180,6 +182,17 @@ au FileType go nmap <leader>gd <Plug>(go-doc)
 au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 " Open the Godoc in browser
 au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+
+""""""""""
+" govim  "
+""""""""""
+set updatetime=500
+set balloondelay=250
+au FileType go nmap <silent> <buffer> <leader>h : <C-u>call GOVIMHover()<CR>
+if has("patch-8.1.1904")
+  set completeopt+=popup
+  set completepopup=align:menu,border:off,highlight:Pmenu
+endi
 
 """""""""""""""""""
 " VimCompleteMe "
