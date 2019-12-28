@@ -69,6 +69,16 @@ input "1452:627:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad" {
     xkb_options caps:none,grp:alt_space_toggle
 }
 
+input "1452:615:Apple_Inc._Magic_Keyboard" {
+    xkb_layout "us,ru"
+    xkb_options caps:none,grp:alt_space_toggle
+}
+
+input "76:615:outstanding_keyboard" {
+    xkb_layout "us,ru"
+    xkb_options caps:none,grp:alt_space_toggle
+}
+
 # MBP touchpad
 input "1452:627:bcm5974" {
     natural_scroll enabled
@@ -257,7 +267,12 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +1% #increase sound vo
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
-bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
+
+# bluetooth control
+# t470
+# bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
+# MBP
+bindsym $mod+b exec ~/bin/sway-bt-toggle
 
 # t470
 # bindsym XF86Display exec  # F7
@@ -272,10 +287,16 @@ bindsym XF86MonBrightnessDown exec light -U 1
 bindsym XF86KbdBrightnessUp exec light -s 'sysfs/leds/smc::kbd_backlight' -A 1
 bindsym XF86KbdBrightnessDown exec light -s 'sysfs/leds/smc::kbd_backlight' -U 1
 
+# Control mouse cursor with keyboard
+# bindsym Ctrl+Alt+Left seat - cursor move -5 0
+# bindsym Ctrl+Alt+Right seat - cursor move 5 0
+# bindsym Ctrl+Alt+Down seat - cursor move 0 5
+# bindsym Ctrl+Alt+Up seat - cursor move 0 -5
+
 # apps behavior
 for_window [app_id="blueberry.py"] floating enable
 for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
-for_window [app_id="keepassxc"] floating enable, border pixel, move position 1105 466
+for_window [app_id="keepassxc"] floating enable, border pixel, move position 900 466
 for_window [app_id="pavucontrol"] floating enable, resize set width 635 height 400
 for_window [app_id="pcmanfm"] floating enable, border pixel
 

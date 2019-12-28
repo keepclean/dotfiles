@@ -104,10 +104,9 @@ nnoremap <S-l> gt
 
 autocmd BufWritePre *.py execute ':Black'
 autocmd FileType gitcommit,markdown setlocal spell
-autocmd Filetype json setlocal ts=2 sts=2 sw=2
-autocmd Filetype lua setlocal ts=2 sts=2 sw=2
+autocmd Filetype json,lua,css setlocal ts=2 sts=2 sw=2
 autocmd Filetype qf setlocal nobuflisted norelativenumber nonumber colorcolumn=
-autocmd Filetype yaml,yml setlocal ts=2 sts=2 sw=2 cursorcolumn
+autocmd Filetype yaml,yml,html setlocal ts=2 sts=2 sw=2 cursorcolumn
 
 """""""""""
 " vim.fzf "
