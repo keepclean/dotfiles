@@ -180,8 +180,8 @@ input "1452:627:bcm5974" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+minus splith
-    bindsym $mod+backslash splitv
+    bindsym $mod+minus splitv
+    bindsym $mod+backslash splith
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
