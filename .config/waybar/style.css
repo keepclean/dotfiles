@@ -1,5 +1,5 @@
 * {
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Meslo LG S";
 }
 
@@ -58,6 +58,11 @@ window#waybar {
     color: #df2935;
 }
 
+#custom-bt {
+    color: #268bd2;
+}
+
+#custom-bt,
 #idle_inhibitor,
 #clock,
 #pulseaudio,

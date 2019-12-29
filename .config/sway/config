@@ -83,6 +83,8 @@ input "76:615:outstanding_keyboard" {
 input "1452:627:bcm5974" {
     natural_scroll enabled
     middle_emulation enabled
+    accel_profile flat
+    scroll_factor 0.5
 }
 
 
@@ -272,7 +274,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
 # t470
 # bindsym XF86Bluetooth exec ~/bin/sway-bt-toggle
 # MBP
-bindsym $mod+b exec ~/bin/sway-bt-toggle
+bindsym $mod+b exec ~/bin/sway-bt-toggle --toggle
 
 # t470
 # bindsym XF86Display exec  # F7

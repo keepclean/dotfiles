@@ -3,7 +3,7 @@
     "height": 22,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     // "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "backlight", "battery", "network", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "backlight", "custom/bt", "battery", "network", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -83,5 +83,13 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/bt": {
+        "exec": "cat ~/.cache/sway-bt-toggle/status",
+        "interval": 5,
+        "format": "{icon}",
+        "format-icons": ["noBT", ""],
+        "return-type": "json",
+        "tooltip": false
     }
 }

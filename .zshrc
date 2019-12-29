@@ -12,11 +12,12 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 # Customize to your needs...
 export EDITOR=vim
-export GOPATH=$HOME/code
 export GOBIN=$HOME/bin
-export PATH=$PATH:$GOBIN
-export LC_ALL=en_US.UTF-8
+export GOPATH=$HOME/code
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export MANWIDTH=80
+export PATH=$PATH:$GOBIN
 export SYSTEMD_LESS="FRXMK"
 setopt interactivecomments
 
