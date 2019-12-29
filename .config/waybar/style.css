@@ -60,9 +60,10 @@ window#waybar {
 
 #custom-bt {
     color: #268bd2;
+    padding: 0 1px;
+    font-size: 18px;
 }
 
-#custom-bt,
 #idle_inhibitor,
 #clock,
 #pulseaudio,
