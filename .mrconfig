@@ -94,3 +94,6 @@ checkout = git clone 'https://github.com/cylgom/ly.git' 'ly'
 
 [code/src/github.com/keepclean/pd-oncall]
 checkout = git clone 'git@github.com:keepclean/pd-oncall.git' 'pd-oncall'
+
+[code/src/github.com/keepclean/pi-zero]
+checkout = git clone 'git@github.com:keepclean/pi-zero.git' 'pi-zero'

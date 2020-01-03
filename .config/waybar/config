@@ -9,7 +9,7 @@
         "all-outputs": true,
         "format": "{name}{icon}",
         "format-icons": {
-            "urgent": "-",
+            "urgent": "",
             "focused": "",
             "default": ""
         }
@@ -19,7 +19,7 @@
     },
     "sway/window": {
         "tooltip": false,
-        "format": "       <span style=\"italic\">{}</span>"
+        "format": "{}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -59,6 +59,9 @@
             "critical": 5
         },
         "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -70,9 +73,12 @@
         "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
@@ -80,7 +86,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },

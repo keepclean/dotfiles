@@ -26,6 +26,12 @@ window#waybar {
     border: #1a1a1a;
 }
 
+#window {
+  font-style: italic;
+  color: #6fcaab;
+  margin-left: 30px;
+}
+
 #pulseaudio {
     color: #268bd2;
 }
