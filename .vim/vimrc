@@ -112,7 +112,7 @@ autocmd Filetype yaml,yml,html setlocal ts=2 sts=2 sw=2 cursorcolumn
 " vim.fzf "
 """""""""""
 nnoremap <c-p> :FZF<cr>
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'window': '10new' }
 
 """""""""""
 " argwrap "
@@ -188,6 +188,7 @@ au FileType go nmap <leader>gb <Plug>(go-doc-browser)
 set updatetime=500
 set balloondelay=250
 au FileType go nmap <silent> <buffer> <leader>h : <C-u>call GOVIMHover()<CR>
+au FileType go nmap <leader>r :GOVIMReferences<CR>
 if has("patch-8.1.1904")
   set completeopt+=popup
   set completepopup=align:menu,border:off,highlight:Pmenu
