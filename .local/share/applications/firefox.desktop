@@ -13,12 +13,12 @@ MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme
 StartupNotify=true
 StartupWMClass=Firefox
 Categories=Network;WebBrowser;
-Actions=new-window;new-private-window;
+# Actions=new-window;new-private-window;
 
-[Desktop Action new-window]
-Name=New Window
-Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --new-window %u
+# [Desktop Action new-window]
+# Name=New Window
+# Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --new-window %u
 
-[Desktop Action new-private-window]
-Name=New Private Window
-Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --private-window %u
+# [Desktop Action new-private-window]
+# Name=New Private Window
+# Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox --private-window %u

@@ -13,4 +13,3 @@ MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme
 StartupNotify=true
 StartupWMClass=Firefox
 Categories=Network;WebBrowser;
-Actions=new-window;new-private-window;
