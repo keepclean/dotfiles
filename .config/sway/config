@@ -15,8 +15,6 @@ set $term $HOME/bin/alacritty-time-wrapper
 
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-# set $menu bemenu-run -b
-# set $menu j4-dmenu-desktop --dmenu='bemenu -i -b --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:Noto Sans Mono 12"' --term='alacritty' --no-generic --use-xdg-de
 set $menu /sbin/flock -n /tmp/wofi-menu $HOME/bin/wofi --show drun --allow-images --width 1920 --height 1102
 
 set $swaylock $HOME/bin/sway-lock-wrapper
@@ -188,13 +186,13 @@ input "1452:627:bcm5974" {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym XF86LaunchA layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+XF86LaunchA floating toggle, border pixel 1
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
@@ -298,6 +296,7 @@ bindsym XF86KbdBrightnessDown exec light -s 'sysfs/leds/smc::kbd_backlight' -U 1
 # apps behavior
 for_window [app_id="blueberry.py"] floating enable
 for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, move position 877 450, sticky enable
 for_window [app_id="keepassxc"] floating enable, border pixel, move position 900 466
 for_window [app_id="pavucontrol"] floating enable, resize set width 635 height 400
 for_window [app_id="pcmanfm"] floating enable, border pixel
