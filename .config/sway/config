@@ -115,7 +115,7 @@ input "1452:627:bcm5974" {
     bindsym $mod+Shift+c reload
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot'
 
     # lock screen
     bindsym $mod+Ctrl+q exec $swaylock

@@ -1,0 +1,91 @@
+---
+
+- name: install common laptop packages
+  pacman:
+    name:
+      - alacritty
+      - autojump
+      - bluez-tools
+      - bluez-utils
+      - fd
+      - firefox
+      - fzf
+      - git
+      - go
+      - grim
+      - imagemagick
+      - imv
+      - jq
+      - keepassxc
+      - light
+      - mako
+      - pavucontrol
+      - podman
+      - powertop
+      - pulseaudio
+      - pulseaudio-alsa
+      - pulseaudio-bluetooth
+      - python
+      - qt5-wayland
+      - ripgrep
+      - slurp
+      - sudo
+      - sway
+      - swayidle
+      - swaylock
+      - tlp
+      - tmux
+      - tree
+      - vim
+      - vlc
+      - waybar
+      - wl-clipboard
+      - zathura
+      - zathura-pdf-mupdf
+      - zsh
+    state: present
+    update_cache: "yes"
+
+- name: copy udevmon config file
+  copy:
+    src: etc/udevmon/udevmon.yaml
+    dest: /etc/udevmon/udevmon.yaml
+
+- name: copy udevmon service
+  copy:
+    src: etc/systemd/system/udevmon.service
+    dest: /etc/systemd/system/udevmon.service
+
+- name: enable udevmon service
+  systemd:
+    name: udevmon.service
+    state: started
+    enabled: "yes"
+
+- name: copy powertop service
+  copy:
+    src: etc/systemd/system/powertop.service
+    dest: /etc/systemd/system/powertop.service
+
+- name: enable powertop service
+  systemd:
+    name: powertop.service
+    state: started
+    enabled: "yes"
+
+- name: copy ly config file
+  copy:
+    src: etc/ly/config.ini
+    dest: /etc/ly/config.ini
+    mode: 0644
+
+- name: copy override file for ly service
+  copy:
+    src: etc/systemd/system/ly.service.d/override.conf
+    dest: /etc/systemd/system/ly.service.d/override.conf
+
+- name: enable ly service
+  systemd:
+    name: ly.service
+    state: started
+    enabled: "yes"
