@@ -89,3 +89,8 @@
     name: ly.service
     state: started
     enabled: "yes"
+
+- name: copy sway systemd config file
+  copy:
+    src: etc/sway/conf.d/10-systemd.conf
+    dest: /etc/sway/conf.d/10-systemd.conf
