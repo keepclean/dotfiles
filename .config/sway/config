@@ -294,11 +294,11 @@ bindsym XF86KbdBrightnessDown exec light -s 'sysfs/leds/smc::kbd_backlight' -U 1
 # bindsym Ctrl+Alt+Up seat - cursor move 0 -5
 
 # apps behavior
-for_window [app_id="blueberry.py"] floating enable
-for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+for_window [app_id="blueberry.py"] floating enable, border pixel
+for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable, border pixel
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, move position 877 450, sticky enable
 for_window [app_id="keepassxc"] floating enable, border pixel, move position 900 466
-for_window [app_id="pavucontrol"] floating enable, resize set width 635 height 400
+for_window [app_id="pavucontrol"] floating enable, border pixel, resize set width 635 height 400
 for_window [app_id="pcmanfm"] floating enable, border pixel
 
 for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
