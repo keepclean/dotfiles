@@ -304,7 +304,7 @@ for_window [app_id="pcmanfm"] floating enable, border pixel
 for_window [app_id="alacritty-float"] floating enable, border pixel, resize set height 698 width 760
 bindsym $mod+t exec $term --class="alacritty-float"
 
-include /etc/sway/conf.d/*
+include /etc/sway/config.d/*
 
 # junk
 xwayland disable

@@ -92,5 +92,15 @@
 
 - name: copy sway systemd config file
   copy:
-    src: etc/sway/conf.d/10-systemd.conf
-    dest: /etc/sway/conf.d/10-systemd.conf
+    src: etc/sway/config.d/50-systemd-user.conf
+    dest: /etc/sway/config.d/50-systemd-user.conf
+
+- name: copy subuid for podman
+  copy:
+    src: etc/subuid
+    dest: /etc/subuid
+
+- name: copy subgid for podman
+  copy:
+    src: etc/subgid
+    dest: /etc/subgid
