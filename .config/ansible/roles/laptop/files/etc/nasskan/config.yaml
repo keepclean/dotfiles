@@ -1,0 +1,38 @@
+---
+version: 1
+devices:
+  # internal keyboard
+  - if:
+      ID_VENDOR_ID: 05ac
+      ID_SERIAL_SHORT: D3H5233LTH1GHJGA24BF
+      ID_INPUT_KEYBOARD: "1"
+    then:
+      - from:
+          key: CAPSLOCK
+        to:
+          key: LEFTCTRL
+        tap:
+          key: ESC
+      - from:
+          key: M
+          with:
+            - LEFTCTRL
+        to:
+          key: ENTER
+  # magic keyboard
+  - if:
+      MAJOR: 13
+      MINOR: 83
+    then:
+      - from:
+          key: CAPSLOCK
+        to:
+          key: LEFTCTRL
+        tap:
+          key: ESC
+      - from:
+          key: M
+          with:
+            - LEFTCTRL
+        to:
+          key: ENTER

@@ -46,19 +46,19 @@
     state: present
     update_cache: "yes"
 
-- name: copy udevmon config file
+- name: copy nasskan config file
   copy:
-    src: etc/udevmon/udevmon.yaml
-    dest: /etc/udevmon/udevmon.yaml
+    src: etc/nasskan/config.yaml
+    dest: /etc/nasskan/config.yaml
 
-- name: copy udevmon service
+- name: copy nasskan service
   copy:
-    src: etc/systemd/system/udevmon.service
-    dest: /etc/systemd/system/udevmon.service
+    src: etc/systemd/system/nasskan.service
+    dest: /etc/systemd/system/nasskan.service
 
-- name: enable udevmon service
+- name: enable nasskan service
   systemd:
-    name: udevmon.service
+    name: nasskan.service
     state: started
     enabled: "yes"
 
