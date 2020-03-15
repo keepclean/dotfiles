@@ -21,8 +21,9 @@ devices:
           key: ENTER
   # magic keyboard
   - if:
-      MAJOR: 13
-      MINOR: 83
+      ID_VENDOR_ID: 05ac
+      ID_SERIAL_SHORT: F0T8257016JJ1Y5AT
+      ID_INPUT_KEYBOARD: "1"
     then:
       - from:
           key: CAPSLOCK
