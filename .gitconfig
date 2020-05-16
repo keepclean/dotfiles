@@ -8,5 +8,7 @@
     default = simple
 [core]
     editor = vim
+    eol = lf
+    autocrlf = input
 [help]
     autocorrect = 1

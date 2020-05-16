@@ -16,12 +16,10 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'govim/govim', {'for': 'go'}
 Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/fzf.vim'
-Plug 'justmao945/vim-clang', {'for': ['c', 'cpp']}
 Plug 'majutsushi/tagbar'
 Plug 'neomake/neomake'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'psf/black', {'for': 'python'}
-Plug 'saltstack/salt-vim', {'for': 'sls'}
 Plug 'sheerun/vim-polyglot'
 Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
 Plug 'tpope/vim-fugitive'
