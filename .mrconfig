@@ -1,0 +1,102 @@
+
+[code/src/gitlab.com/interception/linux/plugins/caps2esc]
+checkout = git clone 'https://gitlab.com/interception/linux/plugins/caps2esc.git' 'caps2esc'
+
+[code/src/gitlab.com/interception/linux/tools]
+checkout = git clone 'https://gitlab.com/interception/linux/tools.git' 'tools'
+
+[code/src/hg.sr.ht/scoopta/wofi]
+checkout = hg clone 'https://hg.sr.ht/~scoopta/wofi' 'wofi'
+
+[code/src/github.com/keepclean/airflow-sandbox]
+checkout = git clone 'git@github.com:keepclean/airflow-sandbox.git' 'airflow-sandbox'
+
+[code/src/github.com/keepclean/am-view-cli]
+checkout = git clone 'git@github.com:keepclean/am-view-cli.git' 'am-view-cli'
+
+[code/src/github.com/keepclean/book-k8s-in-action]
+checkout = git clone 'git@github.com:keepclean/book-k8s-in-action.git' 'book-k8s-in-action'
+
+[code/src/github.com/keepclean/boostnote]
+checkout = git clone 'git@github.com:keepclean/boostnote.git' 'boostnote'
+
+[code/src/github.com/keepclean/cdwrs]
+checkout = git clone 'git@github.com:keepclean/cdwrs.git' 'cdwrs'
+
+[code/src/github.com/keepclean/cf-dotfiles]
+checkout = git clone 'git@github.com:keepclean/cf-dotfiles.git' 'cf-dotfiles'
+
+[code/src/github.com/keepclean/cf-python-sandbox]
+checkout = git clone 'git@github.com:keepclean/cf-python-sandbox.git' 'cf-python-sandbox'
+
+[code/src/github.com/keepclean/cgv2-exporter]
+checkout = git clone 'git@github.com:keepclean/cgv2-exporter.git' 'cgv2-exporter'
+
+[code/src/github.com/keepclean/colo-health]
+checkout = git clone 'git@github.com:keepclean/colo-health.git' 'colo-health'
+
+[code/src/github.com/keepclean/dotfiles]
+checkout = git clone 'git@github.com:keepclean/dotfiles.git' 'dotfiles'
+
+[code/src/github.com/keepclean/exercism-tasks]
+checkout = git clone 'git@github.com:keepclean/exercism-tasks.git' 'exercism-tasks'
+
+[code/src/github.com/keepclean/go-snippets-sandbox]
+checkout = git clone 'git@github.com:keepclean/go-snippets-sandbox.git' 'go-snippets-sandbox'
+
+[code/src/github.com/keepclean/hometest]
+checkout = git clone 'git@github.com:keepclean/hometest.git' 'hometest'
+
+[code/src/github.com/keepclean/hot-potato]
+checkout = git clone 'git@github.com:keepclean/hot-potato.git' 'hot-potato'
+
+[code/src/github.com/keepclean/keepclean.github.io]
+checkout = git clone 'git@github.com:keepclean/keepclean.github.io.git' 'keepclean.github.io'
+
+[code/src/github.com/keepclean/my-go-edu]
+checkout = git clone 'git@github.com:keepclean/my-go-edu.git' 'my-go-edu'
+
+[code/src/github.com/keepclean/nomad-demo]
+checkout = git clone 'git@github.com:keepclean/nomad-demo.git' 'nomad-demo'
+
+[code/src/github.com/keepclean/notes]
+checkout = git clone 'git@github.com:keepclean/notes' 'notes'
+
+[code/src/github.com/keepclean/oncall]
+checkout = git clone 'git@github.com:keepclean/oncall.git' 'oncall'
+
+[code/src/github.com/keepclean/py-snippets-sandbox]
+checkout = git clone 'git@github.com:keepclean/py-snippets-sandbox.git' 'py-snippets-sandbox'
+
+[code/src/github.com/keepclean/python-code]
+checkout = git clone 'git@github.com:keepclean/python-code.git' 'python-code'
+
+[code/src/github.com/keepclean/sandbox-vagrant-salt]
+checkout = git clone 'git@github.com:keepclean/sandbox-vagrant-salt.git' 'sandbox-vagrant-salt'
+
+[code/src/github.com/keepclean/tinyfix]
+checkout = git clone 'git@github.com:keepclean/tinyfix.git' 'tinyfix'
+
+[code/src/github.com/keepclean/win2alt]
+checkout = git clone 'git@github.com:keepclean/win2alt.git' 'win2alt'
+
+[code/src/hg.sr.ht/sircmpwn/wev]
+checkout = git clone 'https://git.sr.ht/~sircmpwn/wev' 'wev'
+
+[code/src/myrepos.branchable.com/myrepos]
+checkout = git clone 'git://myrepos.branchable.com/' 'myrepos'
+
+[code/src/github.com/minus7/redshift]
+checkout = git clone 'https://github.com/minus7/redshift.git' 'redshift'
+
+[code/src/github.com/cylgom/ly]
+checkout = git clone 'https://github.com/cylgom/ly.git' 'ly'
+
+[code/src/github.com/keepclean/pd-oncall]
+checkout = git clone 'git@github.com:keepclean/pd-oncall.git' 'pd-oncall'
+
+[code/src/github.com/keepclean/pi-configuration]
+checkout = git clone 'git@github.com:keepclean/pi-configuration.git' 'pi-configuration'
+
+[code/src/github.com/tadosappo/nasskan]
+checkout = git clone 'https://github.com/tadosappo/nasskan.git' 'nasskan'

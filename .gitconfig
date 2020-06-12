@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[alias]
+    last = log -1 HEAD
+[user]
+    name = Rustam Iuldashev
+    email = rustam.iuldashev@protonmail.com
+[push]
+    default = simple
+[core]
+    editor = vim
+    eol = lf
+    autocrlf = input
+[help]
+    autocorrect = 1

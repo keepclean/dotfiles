@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+current_hours=$(date +"%H")
+config="${HOME}/.config/alacritty/alacritty.yml"
+if [ "${current_hours}" -ge 18 -o "${current_hours}" -lt 7 ]; then
+    config="${HOME}/.config/alacritty/alacritty-dark.yml"
+fi
+
+nohup alacritty --config-file="${config}" "$@" >/dev/null 2>&1 &
