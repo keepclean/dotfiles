@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-mkdir .facts-cache
+mkdir -p .facts-cache
 
-python -m venv py-venv
-source py-venv/bin/activate
-
-pip install --upgrade ansible yamllint
+python3 -m venv py-venv
+if . py-venv/bin/activate; then
+    pip install --upgrade ansible yamllint
+fi

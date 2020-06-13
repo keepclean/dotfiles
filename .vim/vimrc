@@ -37,6 +37,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
+set ffs=unix
 syntax on
 
 let term_color=$TERM_COLOR

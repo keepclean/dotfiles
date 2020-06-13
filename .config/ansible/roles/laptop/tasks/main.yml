@@ -3,6 +3,8 @@
 - name: install common laptop packages
   apt:
     name:
+      - alacritty
+      - autojump
       - fzf
       - jq
       - ripgrep
@@ -12,6 +14,12 @@
       - zsh
     state: present
     update_cache: "yes"
+
+- name: create nasskan directory
+  file:
+    path: /etc/nasskan
+    state: directory
+    mode: "0755"
 
 - name: copy nasskan config file
   copy:

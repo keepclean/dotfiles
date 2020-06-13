@@ -114,4 +114,7 @@ fi
 alias config='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 
 WORDCHARS=''
-[ -e "$(command -v autojump)" ] && source /etc/profile.d/autojump.zsh
+if [ -e "$(command -v autojump)" ]; then
+    test -f /etc/profile.d/autojump.zsh && source /etc/profile.d/autojump.zsh
+    test -f /usr/share/autojump/autojump.zsh && source /usr/share/autojump/autojump.zsh
+fi

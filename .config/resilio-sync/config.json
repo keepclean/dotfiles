@@ -1,12 +1,10 @@
 {
-    "device_name": "death star",
-    "directory_root" : "/home/keepclean/private/sync/",
-    "storage_path" : "/home/keepclean/.config/resilio-sync/storage",
-    "pid_file" : "/home/keepclean/.config/resilio-sync/sync.pid",
-
-    "webui" :
-    {
-        "force_https": true,
-        "listen" : "127.0.0.1:8888"
-    }
+  "device_name": "death star",
+  "directory_root": "/home/keepclean/Private/sync/",
+  "storage_path": "/home/keepclean/.config/resilio-sync/storage",
+  "pid_file": "/home/keepclean/.config/resilio-sync/sync.pid",
+  "webui": {
+    "force_https": true,
+    "listen": "127.0.0.1:8888"
+  }
 }
