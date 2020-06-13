@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=KeePassXC
+GenericName=Password Manager
+TryExec=/home/keepclean/bin/KeePassXC.AppImage
+Exec="/home/keepclean/bin/KeePassXC.AppImage" %U
+Icon=keepassxc
+Terminal=false
+Type=Application
+Categories=Qt;Utility;
+MimeType=application/x-keepass2;
+
+[AppImageHub]
+X-AppImage-UpdateInformation=
+X-AppImage-Type=2
+X-AppImage-Architecture=x86_64
