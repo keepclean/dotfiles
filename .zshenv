@@ -7,7 +7,7 @@ ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
 export EDITOR=vim
 export GOBIN=$HOME/bin
-export GOPATH=$HOME/code
+export GOPATH=$HOME/Code
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export MANWIDTH=80
