@@ -1,0 +1,227 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin()
+" Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'FooSoft/vim-argwrap', {'for': ['python', 'json']}
+Plug 'Raimondi/delimitMate'
+Plug 'Yggdroot/indentLine'
+Plug 'ajh17/VimCompletesMe'
+Plug 'bling/vim-airline'
+Plug 'craigemery/vim-autotag'
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'govim/govim', {'for': 'go'}
+Plug 'jonathanfilip/vim-lucius'
+Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
+Plug 'neomake/neomake'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'psf/black', {'for': 'python'}
+Plug 'sheerun/vim-polyglot'
+Plug 'stephpy/vim-yaml', {'for': ['yaml', 'yml']}
+Plug 'tpope/vim-fugitive'
+Plug 'trevordmiller/nova-vim'
+Plug 'tweekmonster/braceless.vim', {'for': 'python'}
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/CSApprox'
+call plug#end()
+
+set nocompatible
+set timeoutlen=1000 ttimeoutlen=10
+autocmd! GUIEnter * set vb t_vb=
+
+filetype plugin indent on
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ffs=unix
+syntax on
+
+let term_color=$TERM_COLOR
+set background=light
+colorscheme lucius
+if term_color == 'nova'
+    colorscheme nova
+    set background=dark
+    highlight SignColumn guibg=#3C4C55
+endif
+
+
+set hidden
+set noruler
+set noshowmode
+set laststatus=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set ft=cfg
+set hlsearch
+set backspace=2
+set t_Co=256
+set autoindent
+set number
+set relativenumber
+set hidden
+set splitbelow
+set splitright
+set history=100
+set smartcase
+set noincsearch
+set nobackup
+set noswapfile
+
+"""""""""""""""""""
+" redraw speed up "
+"""""""""""""""""""
+set ttyfast
+syntax sync minlines=256
+set ttyscroll=3
+
+"" Fix backspace indent
+set backspace=indent,eol,start
+
+let mapleader=' '
+map <leader>w :write<CR>
+map <leader>e :lnext<CR> " next error
+map <leader>E :lprevious<CR> " previous error
+
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+
+autocmd BufWritePre *.py execute ':Black'
+autocmd FileType gitcommit,markdown,text setlocal spell
+autocmd Filetype json,lua,css setlocal ts=2 sts=2 sw=2
+autocmd Filetype qf setlocal nobuflisted norelativenumber nonumber colorcolumn=
+autocmd Filetype yaml,yml,html setlocal ts=2 sts=2 sw=2 cursorcolumn
+
+"""""""""""
+" vim.fzf "
+"""""""""""
+nnoremap <c-p> :FZF<cr>
+let g:fzf_layout = { 'window': '10new' }
+
+"""""""""""
+" argwrap "
+"""""""""""
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__,.tags
+
+let g:CSApprox_loaded = 1
+
+""""""""""""""
+" IndentLine "
+""""""""""""""
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 'incv'
+let g:indentLine_char = '¦'
+let g:indentLine_faster = 1
+
+"""""""""""""""""""""
+" airline parametrs "
+"""""""""""""""""""""
+let g:airline_extensions = ['tabline', 'neomake']
+let g:airline#extensions#neomake#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline_left_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_powerline_fonts = 1
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_theme="lucius"
+let g:bufferline_echo = 0
+
+""""""""""
+" python "
+""""""""""
+let python_highlight_all = 1
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+""""""""""
+" govim  "
+""""""""""
+set updatetime=500
+set balloondelay=250
+au FileType go nmap <silent> <buffer> <leader>h : <C-u>call GOVIMHover()<CR>
+au FileType go nmap <leader>r :GOVIMReferences<CR>
+if has("patch-8.1.1904")
+  set completeopt+=popup
+  set completepopup=align:menu,border:off,highlight:Pmenu
+endi
+
+"""""""""""""""""""
+" VimCompleteMe "
+"""""""""""""""""""
+set completeopt=menu,longest,menuone
+let b:vcm_tab_complete = 'omni'
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"""""""""""
+" Neomake "
+"""""""""""
+autocmd! BufReadPost,BufWritePost * Neomake
+let g:neomake_list_height = 5
+let g:neomake_open_list = 2
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
+let g:neomake_echo_current_error = 1
+let g:neomake_verbose = 0
+let g:neomake_error_sign = {
+    \ 'text': '✗',
+    \ 'texthl': 'NeomakeErrorSign'
+    \ }
+let g:neomake_info_sign = {
+    \ 'text': 'ⓘ ',
+    \ 'texthl': 'NeomakeInfoSign'
+    \ }
+
+" let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_python_flake8_maker = {
+    \ 'args': ['--ignore=E501'],
+    \ }
+
+""""""""""
+" tagbar "
+""""""""""
+nnoremap <silent> <leader>t :TagbarToggle<CR>
+let g:tagbar_autofocus=1
+let g:tagbar_sort=0
+" let g:tagbar_compact=1
+let g:tagbar_show_linenumbers=2
+
+"""""""""""""""
+" vim-autotag "
+"""""""""""""""
+let g:autotagTagsFile="tags"
+
+"""""""""""""
+" braceless "
+"""""""""""""
+autocmd FileType python BracelessEnable +fold
+
+"""""""""""""
+" yankstack "
+"""""""""""""
+" nmap <leader>p <Plug>yankstack_substitute_older_paste
+" nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+""""""""""""
+" vim-jedi "
+""""""""""""
+" let g:jedi#popup_select_first = 0

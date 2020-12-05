@@ -1,0 +1,48 @@
+---
+
+- name: install common laptop packages
+  apt:
+    name:
+      - alacritty
+      - autojump
+      - fzf
+      - jq
+      - ripgrep
+      - tmux
+      - tree
+      - vim
+      - zsh
+    state: present
+    update_cache: "yes"
+
+- name: create nasskan directory
+  file:
+    path: /etc/nasskan
+    state: directory
+    mode: "0755"
+
+- name: copy nasskan config file
+  copy:
+    src: etc/nasskan/config.yaml
+    dest: /etc/nasskan/config.yaml
+
+- name: copy nasskan service
+  copy:
+    src: etc/systemd/system/nasskan.service
+    dest: /etc/systemd/system/nasskan.service
+
+- name: enable nasskan service
+  systemd:
+    name: nasskan.service
+    state: started
+    enabled: "yes"
+
+- name: copy subuid for podman
+  copy:
+    src: etc/subuid
+    dest: /etc/subuid
+
+- name: copy subgid for podman
+  copy:
+    src: etc/subgid
+    dest: /etc/subgid

@@ -1,0 +1,51 @@
+---
+version: 1
+devices:
+  # internal keyboard
+  - if:
+      ID_VENDOR_ID: 05ac
+      ID_SERIAL_SHORT: D3H5233LTH1GHJGA24BF
+      ID_INPUT_KEYBOARD: "1"
+    then: &common-settings
+      - from:
+          key: CAPSLOCK
+        to:
+          key: LEFTCTRL
+        tap:
+          key: ESC
+      - from:
+          key: M
+          with:
+            - LEFTCTRL
+        to:
+          key: ENTER
+      - from:
+          key: H
+          with:
+            - LEFTCTRL
+        to:
+          key: BACKSPACE
+      - from:
+          key: C
+          with:
+            - LEFTMETA
+        to:
+          key: COPY
+      - from:
+          key: P
+          with:
+            - LEFTMETA
+        to:
+          key: PASTE
+  # magic keyboard
+  - if:
+      ID_VENDOR_ID: 05ac
+      ID_SERIAL_SHORT: F0T8257016JJ1Y5AT
+      ID_INPUT_KEYBOARD: "1"
+    then: *common-settings
+  # magic keyboard over bluetooth
+  - if:
+      LIBINPUT_DEVICE_GROUP: "5/4c/267:a0:99:9b:01:e2:e2"
+      ID_BUS: bluetooth
+      ID_INPUT_KEYBOARD: "1"
+    then: *common-settings
